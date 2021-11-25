@@ -53,7 +53,7 @@ UBOOT_FLAGS ?= CROSS_COMPILE=$(CROSS_COMPILE) ARCH=$(ARCH)
 .PHONY: uboot-imx
 uboot-imx: uboot-imx-defconfig
 	$(MAKE) -C $(UBOOT_PATH) $(UBOOT_FLAGS)
-	cp -f u-boot-dtb.imx $(OUT_PATH)
+	cp -f $(UBOOT_PATH)/u-boot-dtb.imx $(OUT_PATH)
 
 .PHONY: uboot-imx-defconfig
 uboot-imx-defconfig:
